@@ -1,21 +1,30 @@
+// imports from packages
+import { Routes, Route } from 'react-router-dom';
+import { Grid } from '@mui/material';
+
+// import page layout
+import { PageLayout } from "./GenericComponents/PageLayout";
+
+// import page components
+
+const Pages = (props) => {
+
+  return(
+    <Routes>
+      <Route path='/' element={<p>Test Div</p>}/>
+    </Routes>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PageLayout>
+        <Grid container justifyContent="center" alignContent="center">
+          <Pages/>
+        </Grid>
+      </PageLayout>
+    </>
   );
 }
 
