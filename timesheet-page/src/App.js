@@ -6,12 +6,13 @@ import { Grid } from '@mui/material';
 import { PageLayout } from "./GenericComponents/PageLayout";
 
 // import page components
+import { Timesheets } from "./Pages/Timesheets"
 
 const Pages = (props) => {
 
   return(
     <Routes>
-      <Route path='/' element={<p>Test Div</p>}/>
+      <Route path='/' element={<Timesheets/>}/>
     </Routes>
   );
 }
